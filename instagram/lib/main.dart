@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
@@ -12,157 +15,208 @@ class instagram extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: Scaffold(
-        body: SingleChildScrollView(
-
+        appBar: AppBar(
+          title: Text("Instagram"),
+          actions: [
+            Icon(Icons.favorite_outline_rounded,size: 30,),
+            Icon(Icons.more_vert,size: 30,),
+          ],
+        ),
+        body:SingleChildScrollView(
           child: Column(
             children: [
-              ListView.builder(
-                shrinkWrap: true,
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return Column(
+                child: Row(
+                  children: [
+                    
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 4,color: Colors.pink),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage("https://www.gardendesign.com/pictures/images/900x705Max/site_3/monarch-butterfly-on-pink-flowers-butterfly-garden-shutterstock-com_16023.jpg"),
+                            radius: 40,
+                          ),
+                        ),
+                        SizedBox(width: 20,),
+                       Text("user_name"),
+                      ],
+                    ),
+                    SizedBox(width: 20,),
+                    
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 4,color: Colors.pink),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage("https://www.gardendesign.com/pictures/images/900x705Max/site_3/monarch-butterfly-on-pink-flowers-butterfly-garden-shutterstock-com_16023.jpg"),
+                            radius: 40,
+                          ),
+                        ),
+                         SizedBox(width: 20,),
+                     Text("user_name"),
+                      ],
+                    ),
+                    SizedBox(width: 20,),
+                
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 4,color: Colors.pink),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage("https://www.gardendesign.com/pictures/images/900x705Max/site_3/monarch-butterfly-on-pink-flowers-butterfly-garden-shutterstock-com_16023.jpg"),
+                            radius: 40,
+                          ),
+                        ),
+                         SizedBox(width: 20,),
+                     Text("user_name"),
+                      ],
+                    ),
+                     SizedBox(width: 20,),
+                
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 4,color: Colors.pink),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage("https://www.gardendesign.com/pictures/images/900x705Max/site_3/monarch-butterfly-on-pink-flowers-butterfly-garden-shutterstock-com_16023.jpg"),
+                            radius: 40,
+                          ),
+                        ),
+                         SizedBox(width: 20,),
+                     Text("user_name"),
+                      ],
+                    ),
+                     SizedBox(width: 20,),
+                   
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 4,color: Colors.pink),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage("https://www.gardendesign.com/pictures/images/900x705Max/site_3/monarch-butterfly-on-pink-flowers-butterfly-garden-shutterstock-com_16023.jpg"),
+                            radius: 40,
+                          ),
+                        ),
+                         SizedBox(width: 20,),
+                     Text("user_name"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+               SizedBox(height: 20,),
+          
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.pink,width: 5),
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: CircleAvatar(
-                              child: Image.network("https://miro.medium.com/v2/resize:fit:640/format:webp/1*lyyXmbeoK5JiIBNCnzzjjg.png"),
-                              radius: 50,
-                            ),
-                          ),
-                          SizedBox(width: 20,),
-                        ],
+                       SizedBox(width: 10,),
+                      CircleAvatar(
+                        backgroundImage: NetworkImage("https://thumbs.dreamstime.com/b/mystical-glowing-butterfly-black-background-mystical-glowing-butterfly-black-background-selective-focus-ai-generated-339548346.jpg"),
                       ),
-                      Text("name")
-                    ],
-                  );
-                }),
-          
-                Column(
-                    children: [
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F14194198-avatar-icon-human-a-person-s-badge-vector-social-media-profile-symbol-the-symbol-of-a-person&psig=AOvVaw0SqupQGEbgac_MpQ2rIW5l&ust=1737048177280000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjYv-ep-IoDFQAAAAAdAAAAABAJ"),
-                            radius: 20,
-                          ),
-                          SizedBox(width: 20,),
-          
-                          Text("user_name"),
-                        ],
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 300,
-                        child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hongkiat.com%2Fblog%2F25-breathtaking-nature-photography%2F&psig=AOvVaw2zHQduvR4hSSozTLlYlluj&ust=1737051516454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjb3a2r-IoDFQAAAAAdAAAAABAE"),
-                      ),
-          
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 200,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(Icons.favorite_border_outlined, size: 40),
-                                Icon(Icons.messenger_outline_rounded, size: 40),
-                                Icon(Icons.send_outlined, size: 40),
-                              ],
-                            ),
-                          ),
-                          Icon(Icons.comment_bank_outlined, size: 40),
-                        ],
-                      )
-                    ],
-                  ),
-          
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F14194198-avatar-icon-human-a-person-s-badge-vector-social-media-profile-symbol-the-symbol-of-a-person&psig=AOvVaw0SqupQGEbgac_MpQ2rIW5l&ust=1737048177280000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjYv-ep-IoDFQAAAAAdAAAAABAJ"),
-                            radius: 20,
-                          ),
-                          SizedBox(width: 20,),
-          
-                          Text("user_name"),
-                        ],
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 300,
-                        child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hongkiat.com%2Fblog%2F25-breathtaking-nature-photography%2F&psig=AOvVaw2zHQduvR4hSSozTLlYlluj&ust=1737051516454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjb3a2r-IoDFQAAAAAdAAAAABAE"),
-                      ),
-          
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 200,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(Icons.favorite_border_outlined, size: 40),
-                                Icon(Icons.messenger_outline_rounded, size: 40),
-                                Icon(Icons.send_outlined, size: 40),
-                              ],
-                            ),
-                          ),
-                          Icon(Icons.comment_bank_outlined, size: 40),
-                        ],
-                      )
-                    ],
-                  ),
-          
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F14194198-avatar-icon-human-a-person-s-badge-vector-social-media-profile-symbol-the-symbol-of-a-person&psig=AOvVaw0SqupQGEbgac_MpQ2rIW5l&ust=1737048177280000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjYv-ep-IoDFQAAAAAdAAAAABAJ"),
-                            radius: 20,
-                          ),
-                          SizedBox(width: 20,),
-          
-                          Text("user_name"),
-                        ],
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 300,
-                        child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hongkiat.com%2Fblog%2F25-breathtaking-nature-photography%2F&psig=AOvVaw2zHQduvR4hSSozTLlYlluj&ust=1737051516454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjb3a2r-IoDFQAAAAAdAAAAABAE"),
-                      ),
-          
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 200,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(Icons.favorite_border_outlined, size: 40),
-                                Icon(Icons.messenger_outline_rounded, size: 40),
-                                Icon(Icons.send_outlined, size: 40),
-                              ],
-                            ),
-                          ),
-                          Icon(Icons.comment_bank_outlined, size: 40),
-                        ],
-                      )
+                       SizedBox(width: 10,),
+                      Text("user_name")
                     ],
                   ),
                   
+                  Container(
+                    height: 250,
+                    width: double.infinity,
+                    child: Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/09/13063203/KONKAN-FEATURE-compressed.jpg"),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: 150,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(Icons.favorite_outline_outlined,size: 30,),
+                            Icon(Icons.chat_bubble_outline,size: 30,),
+                            Icon(Icons.send,size: 30,),
+                          ],
+                        ),
+                      ),
+                      Icon(Icons.bookmark_border,size: 30,),
+                    ],
+                  ),
+                  Text("Liked by kokani_manus and others"),
+                  Text("Kokan is also known for its natural beauty, with several scenic beaches and hill stations. ")
+                ],
+              ),
+              SizedBox(height: 20,),
+          
+               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                       SizedBox(width: 10,),
+                      CircleAvatar(
+                        backgroundImage: NetworkImage("https://thumbs.dreamstime.com/b/mystical-glowing-butterfly-black-background-mystical-glowing-butterfly-black-background-selective-focus-ai-generated-339548346.jpg"),
+                      ),
+                       SizedBox(width: 10,),
+                      Text("user_name")
+                    ],
+                  ),
+                  
+                  Container(
+                    height: 250,
+                    width: double.infinity,
+                    child: Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/09/13063203/KONKAN-FEATURE-compressed.jpg"),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: 150,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(Icons.favorite_outline_outlined,size: 30,),
+                            Icon(Icons.chat_bubble_outline,size: 30,),
+                            Icon(Icons.send,size: 30,),
+                          ],
+                        ),
+                      ),
+                      Icon(Icons.bookmark_border,size: 30,),
+                    ],
+                  ),
+                  Text("Liked by kokani_manus and others"),
+                  Text("Kokan is also known for its natural beauty, with several scenic beaches and hill stations. ")
+                ],
+              )
+           
             ],
           ),
-        ),
+        )
+        
+        
+        
       ),
     );
   }
